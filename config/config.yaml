@@ -1,0 +1,14 @@
+data_source: https://drive.google.com/u/1/uc?id=1k5GZKICGI3XjHYU9q56_y-lh4kl1U8JE&export=download
+
+
+artifacts: 
+  artifacts_dir: artifacts
+  raw_local_dir: raw_local_dir
+  raw_local_file: data.csv
+
+  split_data_dir: split_data_dir
+  train: train.csv
+  test: test.csv
+
+  clean_data_dir: clean_data_dir 
+  clean_data: clean_data.csv

@@ -1,0 +1,8 @@
+2022-01-30/09:34:21		sucessfully fetch data from https://drive.google.com/u/1/uc?id=1k5GZKICGI3XjHYU9q56_y-lh4kl1U8JE&export=download
+2022-01-30/09:34:21		directory created at artifacts\raw_local_dir
+2022-01-30/09:34:21		data saved at artifacts\raw_local_dir\data.csv
+2022-01-30/09:36:30		sucessfully fetch data from https://drive.google.com/u/1/uc?id=1k5GZKICGI3XjHYU9q56_y-lh4kl1U8JE&export=download
+2022-01-30/09:36:30		directory created at artifacts\raw_local_dir
+2022-01-30/09:36:30		data saved at artifacts\raw_local_dir\data.csv
+2022-01-30/09:37:55		 train data saved at artifacts\split_data_dir\train.csv
+2022-01-30/09:37:55		 test data saved at artifacts\split_data_dir\test.csv
