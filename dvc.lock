@@ -26,8 +26,8 @@ stages:
       md5: 95c504886beb5a2a726c30d576cd59f5
       size: 343
     - path: src/stage02_split_data.py
-      md5: 0c6937ee286b9e427ba6ff15e1c23061
-      size: 1990
+      md5: 3cd8c3603720e0f248fef645c5574021
+      size: 1973
     - path: src/utils/all_utils.py
       md5: a62569103c6213158b7bd6fabbe483c3
       size: 783
@@ -42,3 +42,22 @@ stages:
     - path: artifacts/split_data_dir/train.csv
       md5: 2e78234f9a89b0809b9eb0bc62fda11d
       size: 121920
+  class_balanced_data:
+    cmd: python src/stage03_class_balanced_data.py --config=config/config.yaml
+    deps:
+    - path: artifacts/split_data_dir/train.csv
+      md5: 2e78234f9a89b0809b9eb0bc62fda11d
+      size: 121920
+    - path: config/config.yaml
+      md5: 95c504886beb5a2a726c30d576cd59f5
+      size: 343
+    - path: src/stage03_class_balanced_data.py
+      md5: 7c68fcce276432d8ceae28ce852ab15d
+      size: 2073
+    - path: src/utils/all_utils.py
+      md5: a62569103c6213158b7bd6fabbe483c3
+      size: 783
+    outs:
+    - path: artifacts/clean_data_dir/clean_data.csv
+      md5: a94ef21718728cf4e0b42c904f17e296
+      size: 166266
