@@ -2,7 +2,7 @@ import yaml
 import json
 import os
 from datetime import datetime
-
+import sys
 
 
 def read_yaml(path_to_yaml:str)->dict:
@@ -25,3 +25,13 @@ def save_local_df(data,data_path,index_status=False):
     
 def log(file_object,log_message):
      file_object.write(str(datetime.now().date())+"/"+str(datetime.now().strftime("%H:%M:%S"))+"\t\t"+log_message+"\n")    
+
+
+def save_report(report,report_path:str):
+    with open(report_path,"w+") as i:
+        i.write(report)
+    
+         
+
+            
+        

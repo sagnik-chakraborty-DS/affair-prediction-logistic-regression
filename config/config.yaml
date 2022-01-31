@@ -17,4 +17,4 @@ artifacts:
   model_filename: logistic_regression.model
 
   reports_dir: reports_dir
-  scores: scores.json
+  scores: scores.txt

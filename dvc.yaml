@@ -32,4 +32,26 @@ stages:
     
     outs:
       - artifacts/clean_data_dir/clean_data.csv
-      
+  train:
+    cmd: python src/stage04_model_building.py --config=config/config.yaml 
+    deps: 
+      - src/stage04_model_building.py
+      - src/utils/all_utils.py
+      - config/config.yaml
+      - artifacts/clean_data_dir/clean_data.csv
+
+    
+    outs:
+      - artifacts/model_dir/logistic_regression.model     
+
+  evaluate:
+    cmd: python src/stage05_model_evaluation.py --config=config/config.yaml 
+    
+    deps:
+      - src/stage05_model_evaluation.py
+      - src/utils/all_utils.py
+      - config/config.yaml
+      - artifacts/split_data_dir/test.csv
+      - artifacts/model_dir/logistic_regression.model
+    outs:
+      - artifacts/reports_dir/scores.txt     
