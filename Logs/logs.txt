@@ -1,1 +1,3 @@
 2022-01-31/07:29:00		sucessfully read clean data from artifacts\clean_data_dir\clean_data.csv
+2022-01-31/08:32:09		sucessfully read clean data from artifacts\clean_data_dir\clean_data.csv
+2022-01-31/08:32:09		model  trained

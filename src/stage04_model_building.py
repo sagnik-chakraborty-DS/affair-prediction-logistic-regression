@@ -2,7 +2,8 @@ from src.utils.all_utils import read_yaml,create_directory,save_local_df,log
 import argparse
 import pandas as pd
 import os
-from imblearn.over_sampling import RandomOverSampler
+from sklearn.linear_model import LogisticRegression
+import joblib
 
 log_file = open("Logs\logs.txt", 'a+')
 
@@ -15,7 +16,26 @@ def parameter_tuning(clean_data_path):
         clean_data_file_path = os.path.join(artifacts_dir, clean_data_dir, clean_data)
         clean_data=pd.read_csv(clean_data_file_path)
         log(log_file,f"sucessfully read clean data from {clean_data_file_path}")
-        print(clean_data.head)
+        
+        train_x=clean_data.drop("affair",axis=1)
+        train_y=clean_data["affair"]
+        
+        logmodel=LogisticRegression()
+        logmodel.fit(train_x,train_y)
+        
+        log(log_file,f"model  trained") 
+        
+        model_dir=config["artifacts"]["model_dir"]
+        model_filename=config["artifacts"]["model_filename"]
+
+        model_dir= os.path.join(artifacts_dir,model_dir)
+        create_directory([model_dir])
+        model_path = os.path.join(model_dir,model_filename)
+
+
+        #save model
+        joblib.dump(logmodel,model_path)
+                
     except Exception as e:
         log(log_file,str(e))
 
