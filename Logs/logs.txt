@@ -1,0 +1,10 @@
+2022-01-31/10:22:02		sucessfully fetch data from google drive
+2022-01-31/10:22:02		directory created at artifacts\raw_local_dir
+2022-01-31/10:22:02		data saved at artifacts\raw_local_dir\data.csv
+2022-01-31/10:22:05		 train data saved at artifacts\split_data_dir\train.csv
+2022-01-31/10:22:05		 test data saved at artifacts\split_data_dir\test.csv
+2022-01-31/10:22:09		train data saved at artifacts\split_data_dir\train.csv no of 0's 3035 and no of 1's 1421
+2022-01-31/10:22:09		train clean data saved at artifacts\clean_data_dir\clean_data.csv no of 0's 3035 and no of 1's 3035
+2022-01-31/10:22:12		sucessfully read clean data from artifacts\clean_data_dir\clean_data.csv
+2022-01-31/10:22:12		model  trained
+2022-01-31/10:22:15		report saved at artifacts\reports_dir\scores.txt

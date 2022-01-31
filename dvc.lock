@@ -59,14 +59,14 @@ stages:
       size: 946
     outs:
     - path: artifacts/clean_data_dir/clean_data.csv
-      md5: 1a4bd94371bf1285ab0b59f91f267f99
-      size: 166222
+      md5: 72f320ec0ec321ba9cef1e66018acb9c
+      size: 166230
   train:
     cmd: python src/stage04_model_building.py --config=config/config.yaml
     deps:
     - path: artifacts/clean_data_dir/clean_data.csv
-      md5: 1a4bd94371bf1285ab0b59f91f267f99
-      size: 166222
+      md5: 72f320ec0ec321ba9cef1e66018acb9c
+      size: 166230
     - path: config/config.yaml
       md5: e3d74fde97643e1d423200a867024455
       size: 466
@@ -78,13 +78,13 @@ stages:
       size: 946
     outs:
     - path: artifacts/model_dir/logistic_regression.model
-      md5: 165233ac93827cae62cfd5e1f150b725
+      md5: 612b4757433c9d0124849a6b4c640125
       size: 1387
   evaluate:
     cmd: python src/stage05_model_evaluation.py --config=config/config.yaml
     deps:
     - path: artifacts/model_dir/logistic_regression.model
-      md5: 165233ac93827cae62cfd5e1f150b725
+      md5: 612b4757433c9d0124849a6b4c640125
       size: 1387
     - path: artifacts/split_data_dir/test.csv
       md5: 08f4e6c4d558b3ed5b5dd846fc0d8f09
@@ -93,12 +93,12 @@ stages:
       md5: e3d74fde97643e1d423200a867024455
       size: 466
     - path: src/stage05_model_evaluation.py
-      md5: 9cea9e46e18af371a8c33dc909860256
-      size: 1645
+      md5: 081afdcce38cca88b6bbae431e1228fe
+      size: 1861
     - path: src/utils/all_utils.py
       md5: 2fc071a445098016254e5d1c0dd845c3
       size: 946
     outs:
     - path: artifacts/reports_dir/scores.txt
-      md5: ac69eaf89b8505dbacb17fc2dbcfb067
+      md5: 262cbf2e090915dc13d34fb42b7227cf
       size: 334
