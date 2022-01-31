@@ -10,7 +10,7 @@ def get_data(config_path):
         config = read_yaml(config_path)
         remote_data_path = config["data_source"]
         df = pd.read_csv(remote_data_path,sep=",")
-        log(log_file,f"sucessfully fetch data from {remote_data_path}") 
+        log(log_file,f"sucessfully fetch data from google drive") 
         artifacts_dir = config["artifacts"]['artifacts_dir']
         raw_local_dir = config["artifacts"]['raw_local_dir']
         raw_local_file = config["artifacts"]['raw_local_file'] 
