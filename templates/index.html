@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affair Prediction</title>
+</head>
+<body>
+    <h1>AFFAIR PREDICTION</h1>
+    <h4><a href="report.html">Click Here To See Data Analysis</a></h4>
+    <div class=form>
+        <form action="/predict" method="post">
+            <input type="float" name="Womans_age" id="Womans_age" placeholder="Womans_age">
+            <input type="float" name="yrs_marriage" id="yrs_marriage" placeholder="yrs_marriage">
+            <input type="int" name="number of children" id="number of children" placeholder="number of children">
+            
+            <h1>     </h1>
+            <label for="Rate_marriage">Rating of her marriage(Female Perspective):-></label>
+            <select name="Rate_marriage" id="Rate_marriage">
+                <option value="1">Rate of marriage 1</option>
+                <option value="2">Rate of marriage 2</option>
+                <option value="3">Rate of marriage 3</option>
+                <option value="4">Rate of marriage 4</option>
+                <option value="5">Rate of marriage 5</option>
+            </select>
+            
+            <h1>     </h1>
+            <label for="Religious">woman's rating of how religious she is:-></label>
+            <select name="Religious" id="Religious">
+                <option value="1">Religious 1</option>
+                <option value="2">Religious 2</option>
+                <option value="3">Religious 3</option>
+                <option value="4">Religious 4</option>
+            </select>
+            <h1>     </h1>
+            <label for="Education">Choose Education(For Female):-></label>
+            <select name="Education" id="Education">
+                <option value="9">Grade school</option>
+                <option value="12">High school</option>
+                <option value="14">Collage</option>
+                <option value="16">Collage Graduate</option>
+                <option value="17">Some Graduate School</option>
+                <option value="20">Advanced Degree</option>
+            </select>
+            <h1>     </h1>
+            <label for="Woman occupation">Choose Occupation(For Female):-></label>
+            <select name="Woman occupation" id="Woman occupation">
+                <option value="1">Student(FEMALE)</option>
+                <option value="2">Farming/semi-skilled/unskilled(FEMALE)</option>
+                <option value="3">White collar(FEMALE)</option>
+                <option value="4">teacher/nurse/writer/technician/skilled(FEMALE)</option>
+                <option value="5">managerial/business(FEMALE)</option>
+                <option value="6">professional with advanced degree(FEMALE)</option>
+            </select>
+            <h1>     </h1>
+            <label for="Man occupation">Choose Occupation(For Male):-></label>
+            <select name="Man occupation" id="Man occupation">
+                <option value="1">Student(MALE)</option>
+                <option value="2">Farming/semi-skilled/unskilled(MALE)</option>
+                <option value="3">White collar(MALE)</option>
+                <option value="4">teacher/nurse/writer/technician/skilled(MALE)</option>
+                <option value="5">managerial/business(MALE)</option>
+                <option value="6">professional with advanced degree(MALE)</option>
+            </select>
+            <input type="submit" value="Predict">
+            <h3>NB:=></h3>
+            <h4>Rate_marriage=woman's rating of her marriage (1 = very poor, 5 =very good)</h4>
+            <h4>religious: woman's rating of how religious she is (1 = not religious, 4=strongly religious)</h4>
+             <h5>The dataset I chose is the affairs dataset that comes with Statsmodels. It
+                was derived from a survey of women in 1974 by Redbook magazine, in
+                which married women were asked about their participation in extramarital
+                affairs. More information about the study is available in a 1978 paper from
+                the Journal of Political Economy.
+                </h5>           
+
+            
+        </form>
+
+
+    </div>
+</body>
+</html>
